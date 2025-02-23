@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap</title> 
+
+    <style>
+        body {
+            background-color: rgb(245, 245, 247);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: white;
+            background-color: #4a69bd;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .sitemap-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        svg {
+            width: 80%;
+            height: auto;
+            max-width: 800px;
+        }
+
+        .node-link {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .node-link:hover .node {
+            fill: #4a69bd;  /* Hover effect on node */
+        }
+
+        .node {
+            fill: #849ee8;
+            stroke: #a558d8;
+            stroke-width: 2;
+        }
+
+        .node-text {
+            fill: white;
+            font-size: 16px;
+        }
+
+        .line {
+            stroke: #4a69bd;
+            stroke-width: 1.5;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Sitemap</h1>
+    <div class="sitemap-container">
+        <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <!-- Home Page -->
+            <a href="index.html" class="node-link">
+                <rect x="350" y="20" width="160" height="60" rx="15" ry="15" class="node" alt="Home Page"></rect>
+                <text x="430" y="55" class="node-text" text-anchor="middle">Home Page</text>
+            </a>
+
+            <!-- Lines to Child Pages -->
+            <line x1="430" y1="80" x2="430" y2="140" class="line"></line>
+
+            <!-- New Lines from Home to Volunteer and Table -->
+            <line x1="430" y1="80" x2="230" y2="170" class="line"></line> <!-- Home to Volunteer -->
+            <line x1="430" y1="80" x2="630" y2="170" class="line"></line> <!-- Home to Table -->
+
+            <!-- Branch for child nodes -->
+            <g class="branch">
+                <!-- Volunteer -->
+                <a href="volunteer.html" class="node-link">
+                    <rect x="150" y="170" width="160" height="60" rx="15" ry="15" class="node" alt="Volunteer"></rect>
+                    <text x="230" y="205" class="node-text" text-anchor="middle">Volunteer</text>
+                </a>
+
+                <!-- Table -->
+                <a href="table.html" class="node-link">
+                    <rect x="550" y="170" width="160" height="60" rx="15" ry="15" class="node" alt="Table"></rect>
+                    <text x="630" y="205" class="node-text" text-anchor="middle">Table</text>
+                </a>
+            </g>
+
+            <!-- Lines to User Profile -->
+            <line x1="230" y1="230" x2="230" y2="350" class="line"></line>
+            <line x1="630" y1="230" x2="630" y2="350" class="line"></line>
+
+            <!-- User Profile -->
+            <a href="profile.html" class="node-link">
+                <rect x="150" y="310" width="160" height="60" rx="15" ry="15" class="node" alt="User Profile"></rect>
+                <text x="230" y="345" class="node-text" text-anchor="middle">User Profile</text>
+            </a>
+
+            <!-- Feedback -->
+            <a href="feedback.html" class="node-link">
+                <rect x="550" y="310" width="160" height="60" rx="15" ry="15" class="node" alt="Feedback"></rect>
+                <text x="630" y="345" class="node-text" text-anchor="middle">Feedback</text>
+            </a>
+
+            <!-- Lines to Team -->
+            <line x1="230" y1="370" x2="230" y2="460" class="line"></line>
+            <line x1="630" y1="370" x2="630" y2="460" class="line"></line>
+
+            <!-- Team -->
+            <a href="team.html" class="node-link">
+                <rect x="150" y="460" width="160" height="60" rx="15" ry="15" class="node" alt="Team"></rect>
+                <text x="230" y="495" class="node-text" text-anchor="middle">Team</text>
+            </a>
+
+            <!-- Content Page -->
+            <a href="content.html" class="node-link">
+                <rect x="550" y="460" width="160" height="60" rx="15" ry="15" class="node" alt="Content Page"></rect>
+                <text x="630" y="495" class="node-text" text-anchor="middle">Content Page</text>
+            </a>
+
+            <!-- Line to Validation Page -->
+            <line x1="430" y1="140" x2="430" y2="210" class="line"></line>
+
+            <!-- Validation Page -->
+            <a href="validation.html" class="node-link">
+                <rect x="350" y="210" width="160" height="60" rx="15" ry="15" class="node" alt="Validation Page"></rect>
+                <text x="430" y="245" class="node-text" text-anchor="middle">Validation Page</text>
+            </a>
+
+            <!-- Footer -->
+            <g>
+                <text x="50%" y="750" text-anchor="middle" font-size="14" fill="grey">
+                    Created by Batuhan Amirzehni W2106852
+                </text>
+            </g>
+        </svg>
+    </div>
+</body>
+</html>
