@@ -4,315 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile</title>
-        <style>
-            body {
-                display: flex;
-                height: 100vh;
-                margin: 0;
-                font-family: Arial, sans-serif;
-                background-color: rgb(245, 245, 247);
-            }
-
-            /* Left Side (Fixed Profile Area) */
-            .sidebar {
-                width: 15%;
-                height: 50vh;
-                background-color: #4a69bd;
-                color: white;
-                position: fixed;
-                left: 0.5%;
-                top: 60px;
-                padding: 20px;
-                text-align: center;
-
-                border-radius: 15px;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                border: 0.5px solid #d3d3d3; 
-            }
-
-            .sidebar2 {
-                width: 15%;
-                height: 42vh;
-                background-color: #849ee8;
-                color: white;
-                position: fixed;
-                left: 0.5%;
-                bottom: 1%;
-                padding: 20px;
-                text-align: center;
-                
-                
-                border-radius: 15px;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                border: 0.5px solid #d3d3d3; 
-            }
-
-            .profile-img {
-                width: 80%;  /* Scales based on the sidebar width */
-                max-width: 250px; /* Sets maximum width */
-                height: auto; /* Adjusts height maintaining aspect ratio */
-                border-radius: 50%;
-                object-fit: cover;
-                border: 3px solid white;
-            }
-
-            .profile-img:hover {
-                transform: scale(1.05); /* Subtle zoom effect */
-                transition: transform 0.3s ease-in-out;
-            }
-
-            /* Main Content */
-            .main-content {
-                margin-left: 17.5%;  /* Leaves space equal to the sidebar width (15%) so the content doesn't overlap */
-                width: 85%;  /* Sets main content width to 85% of the screen */
-                display: flex;  /* Uses flexbox layout for flexible alignment */
-                flex-direction: column;  /* Arranges items vertically */
-                gap: 30px;  /* Adds 30px spacing between cards */
-                padding-left: 30px;  /* Adds padding around the content */
-                padding-right: 30px;
-                padding-top: 60px;
-                padding-bottom: 900px;  /* Adds extra space at the bottom so the last card doesn't get squeezed */
-            }
-
-            /* Card Design */
-            .card {
-                background: rgb(255, 255, 255);
-                border-radius: 15px;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 3%;
-                min-width: 150px;
-                border: 0.5px solid #d3d3d3; 
-
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .card:hover {
-                transform: translateY(-5px); /* Moves the card slightly upwards on hover */
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); /* Adds a stronger shadow on hover */
-            }
-
-            /* 2-Column Layout */
-            .grid-2 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-
-            input{
-                width: 100%;
-                padding: 5px;
-                margin-top: 5px;
-                margin-bottom: 20px;
-                border-radius: 5px;
-                border: 1px solid #cccccc;
-            }
-
-            .main-content .card:last-of-type {
-                margin-bottom: 50px;
-            }
-
-            .send{
-                height: 30px;
-                width: 150px;
-                background-color: #4a69bd;
-                color: white;
-                border-radius: 15px;
-                cursor: pointer;
-            }
-
-            /* Progress Bar Container */
-            .progress-container {
-                width: 100%;
-                background-color: #eee;
-                border-radius: 10px;
-                overflow: hidden;
-                height: 25px;
-            }
-
-            /* Fill Bar */
-            .progress-bar {
-                height: 100%;
-                width: 70%; /* Set percentage here */
-                background-color: #4CAF50;
-                text-align: center;
-                line-height: 25px;
-                color: white;
-                font-weight: 100;
-                transition: width 0.5s ease-in-out;
-            }
-
-            footer{
-                text-align: center;
-                padding-bottom: 50px;
-            }
-
-            .page_editor{
-                height: 30px;
-                width: 150px;
-                background-color: #4a69bd;
-                color: white;
-                border-radius: 15px;
-                cursor: pointer;
-            }
-
-            .page_editor:hover{
-                background-color: #3a539b;
-            }
-
-            .schedule-container {
-                max-width: 600px;
-                margin: auto;
-                overflow-x: auto;
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                background: white;
-                border-radius: 10px;
-                overflow: hidden;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            }
-
-            th, td {
-                padding: 12px;
-                text-align: center;
-                border: 1px solid #ddd;
-            }
-
-            th {
-                background-color: #4a69bd;
-                color: white;
-            }
-
-            .available {
-                background-color: #2ecc71;
-                color: white;
-                font-weight: bold;
-            }
-
-            .busy {
-                background-color: #e74c3c;
-                color: white;
-                font-weight: bold;
-            }
-
-            .flexible {
-                background-color: #f1c40f;
-                color: white;
-                font-weight: bold;
-            }
-
-
-
-            /* Header Styling */
-            /* Genel Header Stili */
-            .site-header {
-                width: 100%;
-                background-color: #4a69bd;
-                color: white;
-                text-align: center;
-                padding: 10px;
-                position: fixed;
-                top: 0;
-                left: 0;
-
-                height: 30px;
-                display: flex;
-                align-items: center;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                border: 0.5px solid #d3d3d3; 
-                z-index: 100; /* Ensures the navbar stays on top */
-            }
-
-            .site-header a {
-                margin: 0 3px;
-            }
-
-
-            /* Menü Konteyneri */
-            .menu-container {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-right: 20px;
-            }
-
-            .menu {
-                list-style-type: none;
-                display: flex;
-                padding: 0;
-            }
-
-            .menu li {
-                position: relative;
-                padding: 0 15px; /* Her bir öğenin sağ ve soluna 10px padding */
-            }
-
-            .menu li a {
-                display: block;
-                padding: 15px;
-                text-decoration: none;
-                
-                border-radius: 15px;
-            }
-
-            /* Menü Listesi */
-            .menu ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                gap: 2px;
-
-                flex-wrap: wrap;
-                justify-content: space-around;
-                
-            }
-
-            /* Menü Öğeleri */
-            .menu ul li {
-                display: inline;
-            }
-
-            /* Menü Linkleri */
-            .menu ul li a {
-                color: white;
-                text-decoration: none;
-                font-size: 14px;
-                padding: 1px 7px;
-                transition: background 0.3s ease-in-out;
-            }
-
-            .menu ul li a:hover {
-                background-color: #3a539b;
-                border-radius: 15px;
-                
-            }
-
-            .go-to-top {
-                height: 30px;
-                width: 80px;
-                background-color: #4a69bd;
-                color: white;
-                border-radius: 15px;
-                cursor: pointer;
-                margin-top: 30px;   
-            }
-
-            .go-to-top a {
-                text-decoration: none;
-                color: white;
-            }
-
-            .go-to-top:hover {
-                background-color: #3a539b;
-                transform: translateY(-5px); /* Moves the card slightly upwards on hover */
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); /* Adds a stronger shadow on hover */
-            }
-
-        </style>      
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -326,192 +18,261 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="volunteer.html">Volunteer</a></li>
                         <li><a href="table.html">Table</a></li>
-                        <li><a href="profile.html">User Profile</a></li>
+                        <li><a href="profile.html" style="background-color: #3a539b">User Profile</a></li>
                         <li><a href="feedback.html">Feedback</a></li>
                         <li><a href="sitemap.html">Sitemap</a></li>
                         <li><a href="team.html">Team</a></li>
-                        <li><a href="content.html">Content Page</a></li>
-                        <li><a href="editor.html">Page Editor</a></li>
-                        <li><a href="validation.html">Validation</a></li>
+                        <li><a href="content_ST4.html">Content Page</a></li>
+                        <li><a href="pageEditor_ST4.html">Page Editor</a></li>
+                        <li><a href="validation_ST4.html">Validation</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
 
-
-        <!-- Left Side (Fixed Profile Area) -->
-        <div class="sidebar">
-            <h2>Batuhan Amirzehni</h2>
-            <img src="images/profile_pic.jpg" class="profile-img" alt="Profile Picture">
-            <p>"I am an amazing volunteer"</p>
-            <ul>
-                <li><span>Age -</span> <strong>25</strong></li>
-                <li><span>Work -</span> <strong>Student</strong></li>
-                <li><span>Family -</span> <strong>Single</strong></li>
-                <li><span>Location -</span> <strong>London</strong></li>
-            </ul>
-        </div>
-
-        <!-- Right Side (Skills Area) -->
-        <div class="sidebar2">
-            <h3>Skills</h3>
-
-            <br>
-
-            <p>Communication</p>
-            <div class="progress-container" style="text-align: left center;">
-                <div class="progress-bar" style="width: 85%;">85%</div>
+        <div class="main-wrapper">
+            <!-- Left Side (Fixed Profile Area) -->
+            <div class="profile-sidebar">
+                <h2>Batuhan Amirzehni</h2>
+                <img src="images/profile_pic.jpg" class="profile-img" alt="Profile Picture">
+                <p style="font-size: 14px;">"I am a passionate and dedicated volunteer with a strong interest in technology and community service."</p>
+                <ul style="font-size: 15px; text-align: left;">
+                    <li><span>Age -</span> <strong>25</strong></li>
+                    <li><span>Work -</span> <strong>Student</strong></li>
+                    <li><span>Family -</span> <strong>Single</strong></li>
+                    <li><span>Location -</span> <strong>London</strong></li>
+                </ul>
             </div>
 
-            <br>
+            <!-- Right Side (Skills Area) -->
+            <div class="profile-sidebar2">
+                <h3>Skills</h3>
 
-            <p>Teamwork</p>
-            <div class="progress-container" style="text-align: left center;">
-                <div class="progress-bar" style="width: 80%;">80%</div>
-            </div>
+                <br>
 
-            <br>
-
-            <p>IT</p>
-            <div class="progress-container" style="text-align: left center;">
-                <div class="progress-bar" style="width: 95%;">95%</div>
-            </div>
-
-        </div>
-
-        <!-- Main Content on the Right Side -->
-        <div class="main-content">
-            
-            <div class="card" style="background-color: #a558d8; color: white;">
-                <h3>Short Bio</h3>
-                <p>I am a Computer Science student at the University of Westminster with a strong foundation in Python
-                    programming. I have been actively pursuing coursework in Software Development, Computer System
-                    Fundamentals, and Web Design and Development, which has helped me develop a solid understanding of
-                    both back-end and front-end technologies. I am eager to apply my skills in Python and my academic
-                    knowledge in a real-world software development setting. Currently, I am seeking internship opportunities to
-                    further enhance my practical experience and contribute to meaningful projects.</p>
-            </div>
-
-            
-                <div class="card">
-                    <h3>Goals</h3>
-                    <ol>
-                        <li>Goals 1</li>
-                        <li>Goals 2</li>
-                        <li>Goals 3</li>
-                        <li>Goals 4</li>
-                    </ol>
-                </div>
-                <div class="card">
-                    <h3>Frustrations</h3>
-                    <ul>
-                        <li>Frustration 1</li>
-                        <li>Frustration 2</li>
-                    </ul>
-                </div>
-            
-            
-            
-                <div class="card">
-                    <h3>Experience</h3>
-
-                    <dl>
-                        <dt>Experience 1</dt>
-                        <br>
-                        <dd>I did this and that</dd>
-
-                        <dt>Experience 2</dt>
-                        <br>
-                        <dd>Also, I did amazing</dd>
-                    </dl>
+                <p>Communication</p>
+                <div class="progress-container" style="text-align: center;">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
                 </div>
 
-                <div class="card">
-                    <h3>Volunteering Availability</h3>
+                <br>
 
-                    <div class="schedule-container">
-                        <table>
-                            <tr>
-                                <th>Day</th>
-                                <th>Morning</th>
-                                <th>Afternoon</th>
-                                <th>Evening</th>
-                            </tr>
-                            <tr>
-                                <td>Monday</td>
-                                <td class="available">Available</td>
-                                <td class="busy">Busy</td>
-                                <td class="flexible">Flexible</td>
-                            </tr>
-                            <tr>
-                                <td>Tuesday</td>
-                                <td class="busy">Busy</td>
-                                <td class="available">Available</td>
-                                <td class="available">Available</td>
-                            </tr>
-                            <tr>
-                                <td>Wednesday</td>
-                                <td class="flexible">Flexible</td>
-                                <td class="available">Available</td>
-                                <td class="busy">Busy</td>
-                            </tr>
-                            <tr>
-                                <td>Thursday</td>
-                                <td class="available">Available</td>
-                                <td class="busy">Busy</td>
-                                <td class="flexible">Flexible</td>
-                            </tr>
-                            <tr>
-                                <td>Friday</td>
-                                <td class="busy">Busy</td>
-                                <td class="flexible">Flexible</td>
-                                <td class="available">Available</td>
-                            </tr>
-                            <tr>
-                                <td>Saturday</td>
-                                <td class="available">Available</td>
-                                <td class="available">Available</td>
-                                <td class="busy">Busy</td>
-                            </tr>
-                            <tr>
-                                <td>Sunday</td>
-                                <td class="flexible">Flexible</td>
-                                <td class="available">Available</td>
-                                <td class="available">Available</td>
-                            </tr>
-                        </table>
+                <p>Teamwork</p>
+                <div class="progress-container" style="text-align: center;">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+
+                <br>
+
+                <p>IT</p>
+                <div class="progress-container" style="text-align: center;">
+                    <div class="progress-bar" style="width: 95%;">95%</div>
+                </div>
+
+            </div>
+
+            <!-- Main Content on the Right Side -->
+            <div class="main-content-profilepage">
+                
+                <div class="card" style="background-color: #a558d8; color: white;">
+                    <h2>Short Bio</h2>
+                    <p>I am a Computer Science student at the University of Westminster with a passion for developing innovative solutions. 
+                        My strong foundation in Python programming and experience with web design have equipped me with the tools needed 
+                        to tackle complex software challenges. I actively seek opportunities to work on projects that make a positive impact 
+                        on the community.</p>
+                </div>
+
+                
+                    <div class="card">
+                        <h2 style="display: flex; align-items: center;">
+                            <img src="images/goals.png" alt="goals" style="width: 5%; height: auto; margin-right: 1%;">
+                            Goals
+                        </h2>
+
+                          <ol>
+                            <li>
+                              <strong>Enhance Communication:</strong>
+                              <p>Improve public speaking and interpersonal communication skills to better articulate ideas and feedback.</p>
+                            </li>
+                            <li>
+                              <strong>Advance Technical Skills:</strong>
+                              <p>Learn advanced Python techniques and explore emerging technologies in software development.</p>
+                            </li>
+                            <li>
+                              <strong>Leadership Development:</strong>
+                              <p>Build leadership qualities through team projects and volunteer management opportunities.</p>
+                            </li>
+                            <li>
+                              <strong>Community Impact:</strong>
+                              <p>Engage in projects that drive social change and benefit the local community.</p>
+                            </li>
+                          </ol>
+
                     </div>
 
-                </div>
 
-                <div class="card" style="background-color: #a558d8; color: white;">
-                    <h3>UN Goals I Support</h3>
-                </div>
+                    <div class="card">
+                        <h2 style="display: flex; align-items: center;">
+                            <img src="images/frustrations.png" alt="frustrations" style="width: 6%; height: auto; margin-right: 1%;">
+                            Frustrations
+                        </h2>
 
-                <div class="card">
-                    <h3>Contact Me</h3>
-                    <input type="text" name="name" placeholder="Name">
-                    <br>
-                    <input type="email" name="email" placeholder="somebody@somewhere.com">
-                    <br>
-                    <input type="text" name="message" placeholder="Message" style="min-height: 60px">
+                          <ul>
+                            <li>
+                              <strong>Time Constraints:</strong>
+                              <p>Managing academic responsibilities alongside personal projects can be challenging.</p>
+                            </li>
+                            <li>
+                              <strong>Limited Resources:</strong>
+                              <p>Access to advanced tools and software is sometimes restricted, affecting project scope.</p>
+                            </li>
+                          </ul>
 
-                    <button type="submit" class="send">Send</button>
-                    <br>
-                </div>
+                    </div>
+                
+                
+                
+                    <div class="card">
+                        <h2 style="display: flex; align-items: center;">
+                            <img src="images/experience.png" alt="experience" style="width: 5%; height: auto; margin-right: 1%;">
+                            Experience
+                        </h2>
 
-            <footer>
-                <button type="button" class="page_editor">
-                <a href="editor.html" style="text-decoration: none; color: inherit;">Page Editor</a></button>
-                    <br>
+                        <dl>
+                            <dt><strong>Volunteer at Greenpeace</strong></dt>
+                            <dd>Participated in environmental campaigns, organized community clean-up events, and raised awareness about climate change and sustainable living.</dd>
+                            <dt><strong>Volunteer with United Nations</strong></dt>
+                            <dd>Contributed to global initiatives focused on sustainable development, human rights, and peacekeeping through local outreach programs.</dd>
+                        </dl>
+                    </div>
 
-                <button type="button" class="go-to-top">
-                    <a href="#top">Go to Top</a>
-                </button>
-            </footer>
+                    <div class="card">
+                        <h2 style="display: flex; align-items: center;">
+                            <img src="images/volunteer.png" alt="volunteer" style="width: 6%; height: auto; margin-right: 1%;">
+                            Volunteering Availability
+                          </h2>
+
+                        <div class="schedule-container">
+                            <table>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Morning</th>
+                                    <th>Afternoon</th>
+                                    <th>Evening</th>
+                                </tr>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td class="available">Available</td>
+                                    <td class="busy">Busy</td>
+                                    <td class="flexible">Flexible</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td class="busy">Busy</td>
+                                    <td class="available">Available</td>
+                                    <td class="available">Available</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td class="flexible">Flexible</td>
+                                    <td class="available">Available</td>
+                                    <td class="busy">Busy</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td class="available">Available</td>
+                                    <td class="busy">Busy</td>
+                                    <td class="flexible">Flexible</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td class="busy">Busy</td>
+                                    <td class="flexible">Flexible</td>
+                                    <td class="available">Available</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td class="available">Available</td>
+                                    <td class="available">Available</td>
+                                    <td class="busy">Busy</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td class="flexible">Flexible</td>
+                                    <td class="available">Available</td>
+                                    <td class="available">Available</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="card" style="background-color: #a558d8; color: white;">
+                        <h2 style="display: flex; align-items: center;">
+                          <img src="images/ungoalscircle.png" alt="goals" style="width: 5%; height: auto; margin-right: 1%; background-color: white; border-radius: 50%; padding: 5px;">
+                          UN Goals I Support
+                        </h2>
+
+                        
+                        <p style="margin-bottom: 20px;">
+                            I actively support a range of UN Sustainable Development Goals, including quality education, gender equality, and sustainable communities. My passion drives me to contribute to a better future.
+                        </p>
+
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                            <img class="ungoals" src="images/qualityedu.png" alt="qualityedu" style="width: 15%; height: auto; margin: 5px;">
+                            <img class="ungoals" src="images/goal7.jpg" alt="goal7" style="width: 15%; height: auto; margin: 5px;">
+                            <img class="ungoals" src="images/goal11.jpg" alt="goal11" style="width: 15%; height: auto; margin: 5px;">
+                            <img class="ungoals" src="images/goal13.jpg" alt="goal13" style="width: 15%; height: auto; margin: 5px;">
+                            <img class="ungoals" src="images/goal14.jpg" alt="goal14" style="width: 15%; height: auto; margin: 5px;">
+                            <img class="ungoals" src="images/goal16.jpg" alt="goal16" style="width: 15%; height: auto; margin: 5px;">
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+                        <h2 style="display: flex; align-items: center;">
+                            <img src="images/contactme.png" alt="contactme" style="width: 5%; height: auto; margin-right: 1%;">
+                            Contact Me
+                        </h2>
+
+                        <input type="text" name="name" placeholder="Enter your name">
+                        <br>
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <br>
+                        <textarea name="message" placeholder="Enter your message"></textarea>
+
+                        <br>
+                        <button type="submit" class="send">Send</button>
+                        
+                    </div>
+
+            </div>       
         </div>
 
+
+        <footer class="site-footer">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <ul>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="content_ST4.html">Content Page</a></li>
+                <li><a href="pageEditor_ST4.html">Page Editor</a></li>
+                <li><a href="validation_ST4.html">Validation</a></li>
+            </ul>
+            
+            <button type="button" class="go-to-top" onclick="window.location.href='#top'">
+                Go to Top
+            </button>
+
+        </footer>
         
     </body>
 </html>
