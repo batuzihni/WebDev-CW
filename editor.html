@@ -1,278 +1,382 @@
 <!doctype html>
 <html lang="en">
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Profile</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Editor</title>
+  <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+  <a id="top"></a>
 
-    <body>
-        <a id="top"></a>
+  <header class="site-header">
+    <div class="menu-container">
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="table.html">Table</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="content_ST4.html">Content Page</a></li>
+          <li><a href="pageEditor_ST4.html" style="background-color: #3a539b">Page Editor</a></li>
+          <li><a href="validation_ST4.html">Validation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <div class="main-wrapper">
+    <!-- Main Content on the Right Side -->
+    <div class="main-content-centered">
+      <div class="card" style="display: flex; align-items: center; justify-content: center; text-align: center; background-color: #a558d8; color: white;">
+        <h1>Batuhan Amirzehni - Student 4</h1>
+      </div>
 
-        <header class="site-header">
-            <div class="menu-container">
-                <nav class="menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="volunteer.html">Volunteer</a></li>
-                        <li><a href="table.html">Table</a></li>
-                        <li><a href="profile.html" style="background-color: #3a539b">User Profile</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="content_ST4.html">Content Page</a></li>
-                        <li><a href="pageEditor_ST4.html">Page Editor</a></li>
-                        <li><a href="validation_ST4.html">Validation</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+      <!-- General Structure and Layout Design Card -->
+      <div class="card" id="general-structure">
+        <h2 style="text-align: center; color: #a558d8;">General Structure and Layout Design:</h2>
+        <div class="section">
+          <h3>HTML File:</h3>
+          <p>
+            Each of the HTML files (like profile.html, sitemap.html, content_ST4, etc.) is structured with a clean and semantic approach,
+            using basic HTML tags and ensuring accessibility and usability. The header (&lt;header&gt;) contains a navigation bar with links to other pages.
+            These links are defined within &lt;nav&gt; tags inside an unordered list (&lt;ul&gt;), which improves the semantic meaning of the code.
+            The header is fixed at the top of the page to ensure it stays visible even when the user scrolls.
+          </p>
+        </div>
+      </div>
 
-
-        <div class="main-wrapper">
-            <!-- Left Side (Fixed Profile Area) -->
-            <div class="profile-sidebar">
-                <h2>Batuhan Amirzehni</h2>
-                <img src="images/profile_pic.jpg" class="profile-img" alt="Profile Picture">
-                <p style="font-size: 14px;">"I am a passionate and dedicated volunteer with a strong interest in technology and community service."</p>
-                <ul style="font-size: 15px; text-align: left;">
-                    <li><span>Age -</span> <strong>25</strong></li>
-                    <li><span>Work -</span> <strong>Student</strong></li>
-                    <li><span>Family -</span> <strong>Single</strong></li>
-                    <li><span>Location -</span> <strong>London</strong></li>
-                </ul>
-            </div>
-
-            <!-- Right Side (Skills Area) -->
-            <div class="profile-sidebar2">
-                <h3>Skills</h3>
-
-                <br>
-
-                <p>Communication</p>
-                <div class="progress-container" style="text-align: center;">
-                    <div class="progress-bar" style="width: 85%;">85%</div>
-                </div>
-
-                <br>
-
-                <p>Teamwork</p>
-                <div class="progress-container" style="text-align: center;">
-                    <div class="progress-bar" style="width: 80%;">80%</div>
-                </div>
-
-                <br>
-
-                <p>IT</p>
-                <div class="progress-container" style="text-align: center;">
-                    <div class="progress-bar" style="width: 95%;">95%</div>
-                </div>
-
-            </div>
-
-            <!-- Main Content on the Right Side -->
-            <div class="main-content-profilepage">
-                
-                <div class="card" style="background-color: #a558d8; color: white;">
-                    <h2>Short Bio</h2>
-                    <p>I am a Computer Science student at the University of Westminster with a passion for developing innovative solutions. 
-                        My strong foundation in Python programming and experience with web design have equipped me with the tools needed 
-                        to tackle complex software challenges. I actively seek opportunities to work on projects that make a positive impact 
-                        on the community.</p>
-                </div>
-
-                
-                    <div class="card">
-                        <h2 style="display: flex; align-items: center;">
-                            <img src="images/goals.png" alt="goals" style="width: 5%; height: auto; margin-right: 1%;">
-                            Goals
-                        </h2>
-
-                          <ol>
-                            <li>
-                              <strong>Enhance Communication:</strong>
-                              <p>Improve public speaking and interpersonal communication skills to better articulate ideas and feedback.</p>
-                            </li>
-                            <li>
-                              <strong>Advance Technical Skills:</strong>
-                              <p>Learn advanced Python techniques and explore emerging technologies in software development.</p>
-                            </li>
-                            <li>
-                              <strong>Leadership Development:</strong>
-                              <p>Build leadership qualities through team projects and volunteer management opportunities.</p>
-                            </li>
-                            <li>
-                              <strong>Community Impact:</strong>
-                              <p>Engage in projects that drive social change and benefit the local community.</p>
-                            </li>
-                          </ol>
-
-                    </div>
-
-
-                    <div class="card">
-                        <h2 style="display: flex; align-items: center;">
-                            <img src="images/frustrations.png" alt="frustrations" style="width: 6%; height: auto; margin-right: 1%;">
-                            Frustrations
-                        </h2>
-
-                          <ul>
-                            <li>
-                              <strong>Time Constraints:</strong>
-                              <p>Managing academic responsibilities alongside personal projects can be challenging.</p>
-                            </li>
-                            <li>
-                              <strong>Limited Resources:</strong>
-                              <p>Access to advanced tools and software is sometimes restricted, affecting project scope.</p>
-                            </li>
-                          </ul>
-
-                    </div>
-                
-                
-                
-                    <div class="card">
-                        <h2 style="display: flex; align-items: center;">
-                            <img src="images/experience.png" alt="experience" style="width: 5%; height: auto; margin-right: 1%;">
-                            Experience
-                        </h2>
-
-                        <dl>
-                            <dt><strong>Volunteer at Greenpeace</strong></dt>
-                            <dd>Participated in environmental campaigns, organized community clean-up events, and raised awareness about climate change and sustainable living.</dd>
-                            <dt><strong>Volunteer with United Nations</strong></dt>
-                            <dd>Contributed to global initiatives focused on sustainable development, human rights, and peacekeeping through local outreach programs.</dd>
-                        </dl>
-                    </div>
-
-                    <div class="card">
-                        <h2 style="display: flex; align-items: center;">
-                            <img src="images/volunteer.png" alt="volunteer" style="width: 6%; height: auto; margin-right: 1%;">
-                            Volunteering Availability
-                          </h2>
-
-                        <div class="schedule-container">
-                            <table>
-                                <tr>
-                                    <th>Day</th>
-                                    <th>Morning</th>
-                                    <th>Afternoon</th>
-                                    <th>Evening</th>
-                                </tr>
-                                <tr>
-                                    <td>Monday</td>
-                                    <td class="available">Available</td>
-                                    <td class="busy">Busy</td>
-                                    <td class="flexible">Flexible</td>
-                                </tr>
-                                <tr>
-                                    <td>Tuesday</td>
-                                    <td class="busy">Busy</td>
-                                    <td class="available">Available</td>
-                                    <td class="available">Available</td>
-                                </tr>
-                                <tr>
-                                    <td>Wednesday</td>
-                                    <td class="flexible">Flexible</td>
-                                    <td class="available">Available</td>
-                                    <td class="busy">Busy</td>
-                                </tr>
-                                <tr>
-                                    <td>Thursday</td>
-                                    <td class="available">Available</td>
-                                    <td class="busy">Busy</td>
-                                    <td class="flexible">Flexible</td>
-                                </tr>
-                                <tr>
-                                    <td>Friday</td>
-                                    <td class="busy">Busy</td>
-                                    <td class="flexible">Flexible</td>
-                                    <td class="available">Available</td>
-                                </tr>
-                                <tr>
-                                    <td>Saturday</td>
-                                    <td class="available">Available</td>
-                                    <td class="available">Available</td>
-                                    <td class="busy">Busy</td>
-                                </tr>
-                                <tr>
-                                    <td>Sunday</td>
-                                    <td class="flexible">Flexible</td>
-                                    <td class="available">Available</td>
-                                    <td class="available">Available</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                    </div>
-
-                    <div class="card" style="background-color: #a558d8; color: white;">
-                        <h2 style="display: flex; align-items: center;">
-                          <img src="images/ungoalscircle.png" alt="goals" style="width: 5%; height: auto; margin-right: 1%; background-color: white; border-radius: 50%; padding: 5px;">
-                          UN Goals I Support
-                        </h2>
-
-                        
-                        <p style="margin-bottom: 20px;">
-                            I actively support a range of UN Sustainable Development Goals, including quality education, gender equality, and sustainable communities. My passion drives me to contribute to a better future.
-                        </p>
-
-                        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-                            <img class="ungoals" src="images/qualityedu.png" alt="qualityedu" style="width: 15%; height: auto; margin: 5px;">
-                            <img class="ungoals" src="images/goal7.jpg" alt="goal7" style="width: 15%; height: auto; margin: 5px;">
-                            <img class="ungoals" src="images/goal11.jpg" alt="goal11" style="width: 15%; height: auto; margin: 5px;">
-                            <img class="ungoals" src="images/goal13.jpg" alt="goal13" style="width: 15%; height: auto; margin: 5px;">
-                            <img class="ungoals" src="images/goal14.jpg" alt="goal14" style="width: 15%; height: auto; margin: 5px;">
-                            <img class="ungoals" src="images/goal16.jpg" alt="goal16" style="width: 15%; height: auto; margin: 5px;">
-                        </div>
-
-                    </div>
-
-                    <div class="card">
-                        <h2 style="display: flex; align-items: center;">
-                            <img src="images/contactme.png" alt="contactme" style="width: 5%; height: auto; margin-right: 1%;">
-                            Contact Me
-                        </h2>
-
-                        <input type="text" name="name" placeholder="Enter your name">
-                        <br>
-                        <input type="email" name="email" placeholder="Enter your email">
-                        <br>
-                        <textarea name="message" placeholder="Enter your message"></textarea>
-
-                        <br>
-                        <button type="submit" class="send">Send</button>
-                        
-                    </div>
-
-            </div>       
+      <!-- Profile Page Card -->
+      <div class="card" id="profilepage">
+        <h2 style="text-align: center; color: #a558d8;">Profile Page:</h2>
+        <div class="section">
+          <h3>Structure Overview:</h3>
+          <p>
+            The profile.html page displays personal or professional profile information, structured with a header, main content area, and a footer.
+            The page uses semantic HTML elements to ensure the content is both structured and accessible.
+          </p>
         </div>
 
+        <div class="section">
+          <h4>Key HTML Tags:</h4>
+          <ul>
+            <li>
+              <strong>&lt;header&gt;:</strong> Contains the website or page header, along with the name and title of the user/profile.
+            </li>
+            <li>
+              <strong>&lt;article&gt;:</strong> The primary content area of the page, which holds the main profile details, formatted with &lt;h2&gt; for subheadings, &lt;p&gt; for paragraphs, and &lt;ul&gt; for lists. This groups the profile data in a meaningful, semantic way.
+            </li>
+            <li>
+              <strong>&lt;footer&gt;:</strong> Contains contact information and external links to other social profiles, displayed in a visually separated section at the bottom of the page.
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <h4>CSS Techniques:</h4>
 
-        <footer class="site-footer">
+          <!-- Typography -->
+          <ul>
+            <li>
+              <strong>Typography:</strong> Uses a clean, legible font family (like Arial or Verdana) for readability, with bold headings and well-spaced sections.
+              <ul>
+                <li>CSS Properties: font-family: Arial, sans-serif; margin: 20px 0; padding: 10px;</li>
+              </ul>
+            </li>
+          </ul>
 
+          <!-- Image Styling -->
+          <ul>
+            <li>
+              <strong>Image Styling:</strong> The profile picture is circular, achieved using the border-radius property.
+              <ul>
+                <li>CSS Properties: border-radius: 50%; This gives the profile picture a round appearance.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Grid System -->
+          <ul>
+            <li>
+              <strong>Grid System:</strong> A flexible grid layout is used for positioning profile details and images, ensuring proper alignment across screen sizes.
+              <ul>
+                <li>CSS Properties: display: grid; grid-template-columns: 200px 1fr; Ensures side-by-side alignment on larger screens and a stacked layout on smaller screens.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <h4>Key Features and Functionality:</h4>
+          <ul>
+            <li><strong>Responsive Design:</strong> Media queries adjust the layout on smaller devices for a user-friendly experience.</li>
+            <li><strong>Contact Information Section:</strong> External links and contact details are styled distinctly for clear visual cues.</li>
+          </ul>
+        </div>
+        <br>
+        <a href="profile.html" class="links">Go To Profile Page</a>
+      </div>
+
+      <!-- Sitemap Card -->
+      <div class="card" id="sitemap">
+        <h2 style="text-align: center; color: #a558d8;">Sitemap:</h2>
+        <div class="section">
+          <h3>Structure Overview:</h3>
+          <p>
+            The sitemap.html page serves as a navigation tool for the entire website.
+            It outlines all major sections and links, helping users understand the site’s structure and navigate it efficiently.
+          </p>
+        </div>
+        <div class="section">
+          <h4>Key HTML Tags:</h4>
+          <ul>
+            <li>
+              <strong>&lt;header&gt;:</strong> Contains the site's title and a brief introduction to the sitemap.
+            </li>
+            <li>
+              <strong>&lt;main&gt;:</strong> Encloses the sitemap content and presents links to various pages.
+            </li>
+            <li>
+              <strong>&lt;ul&gt; and &lt;li&gt;:</strong> Structure the sitemap into a hierarchical list of links.
+            </li>
+            <li>
+              <strong>&lt;footer&gt;:</strong> Displays basic site information, including copyright and policy links.
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <h4>CSS Techniques:</h4>
+
+          <!-- Typography and Spacing -->
+          <ul>
+            <li>
+              <strong>Typography and Spacing:</strong> Uses a clean sans-serif font and adequate line spacing for legibility.
+              <ul>
+                <li>CSS Properties: font-family: Arial, sans-serif; line-height: 1.6; padding: 10px;</li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- List Styling -->
+          <ul>
+            <li>
+              <strong>List Styling:</strong> Displays links in an organized list, using <code>list-style-type: none;</code> to remove bullets.
+              <ul>
+                <li>CSS Properties: list-style-type: none; Removes bullet points for a clean appearance.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Link Styling -->
+          <ul>
+            <li>
+              <strong>Link Styling:</strong> Distinct link styling with hover effects to enhance interactivity.
+              <ul>
+                <li>CSS Properties: a:hover { color: #ff4500; text-decoration: underline; } Provides a color change and underline on hover.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <h4>Key Features and Functionality:</h4>
+          <ul>
+            <li><strong>Interactive Links:</strong> All links are clickable and lead to the corresponding site sections.</li>
+            <li><strong>Organization:</strong> The hierarchical list structure helps users easily locate information.</li>
+          </ul>
+        </div>
+        <br>
+        <a href="sitemap.html" class="links">Go To Sitemap</a>
+      </div>
+
+      <!-- Content Page Card -->
+      <div class="card" id="content-page">
+        <h2 style="text-align: center; color: #a558d8;">Content Page:</h2>
+        <div class="section">
+          <h3>Structure Overview:</h3>
+          <p>
+            The content_ST4.html page is part of a content-driven website and is structured to display detailed information in a clear and accessible manner.
+            It uses HTML5 semantic tags and is designed to be responsive and user-friendly.
+          </p>
+        </div>
+        <div class="section">
+          <h4>Key HTML Tags:</h4>
+          <ul>
+            <li>
+              <strong>&lt;header&gt;:</strong> Contains the navigation bar and page title, fixed at the top for easy access.
+            </li>
+            <li>
+              <strong>&lt;main&gt;:</strong> Encloses the main content, including various sections that explain the core topic.
+            </li>
+            <li>
+              <strong>&lt;section&gt;:</strong> Divides the page into logical sections, each styled individually with CSS.
+            </li>
+            <li>
+              <strong>&lt;footer&gt;:</strong> Contains metadata and contact information at the bottom.
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <h4>CSS Techniques:</h4>
+
+          <!-- Grid Layout -->
+          <ul>
+            <li>
+              <strong>Grid Layout:</strong> Uses a CSS Grid for a responsive two-column layout that adapts to screen size.
+              <ul>
+                <li>CSS Properties: display: grid; grid-template-columns: 1fr 1fr; Creates two equal-width columns on larger screens, switching to one column on smaller devices.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Card Design -->
+          <ul>
+            <li>
+              <strong>Card Design:</strong> Sections are styled as cards using box-shadow, padding, and border-radius to create a visually separated appearance.
+              <ul>
+                <li>CSS Properties: box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; Gives cards a 3D look with rounded corners.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <h4>Key Features and Functionality:</h4>
+          <ul>
+            <li><strong>Responsive Design:</strong> Flexbox and media queries ensure a flexible layout across devices.</li>
+            <li><strong>Navigation:</strong> A top navigation bar remains visible as users scroll.</li>
+            <li><strong>Interactive Elements:</strong> Hover effects on cards and navigation items provide visual feedback.</li>
+          </ul>
+        </div>
+        <br>
+        <a href="content_ST4.html" class="links">Go To Content Page</a>
+      </div>
+
+      <!-- Challenges And Lessons Learned Card -->
+      <div class="card" id="challengesandlessons">
+        <h2 style="text-align: center; color: #a558d8;">Challenges And Lessons Learned:</h2>
+        <div class="section">
+          <h3>Challenges:</h3>
+          <ul>
+            <li>
+              <strong>Layout Responsiveness:</strong> Ensuring pages like content_ST4.html, profile.html, and sitemap.html rendered well across all devices was challenging due to fixed widths and layout issues on mobile screens.
+            </li>
+          </ul>
+          <div class="subsection">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
-                <li><a href="table.html">Table</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
+              <li>
+                <strong>Solution:</strong> Implemented meta viewport tags and used flexible layouts (flexbox and grid) to handle resizing smoothly.
+              </li>
             </ul>
+          </div>
+          <ul>
+            <li>
+              <strong>Linking and Navigation Structure:</strong> Managing the navigation between pages was challenging as some links initially did not function as expected.
+            </li>
+          </ul>
+          <div class="subsection">
             <ul>
-                <li><a href="sitemap.html">Sitemap</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="content_ST4.html">Content Page</a></li>
-                <li><a href="pageEditor_ST4.html">Page Editor</a></li>
-                <li><a href="validation_ST4.html">Validation</a></li>
+              <li>
+                <strong>Solution:</strong> Ensured each link had the correct href attribute and used relative paths. In sitemap.html, SVG links with &lt;a&gt; tags were used to represent nodes.
+              </li>
             </ul>
-            
-            <button type="button" class="go-to-top" onclick="window.location.href='#top'">
-                Go to Top
-            </button>
+          </div>
+        </div>
+        <div class="section">
+          <h3>Lessons Learned:</h3>
+          <ul>
+            <li>
+              <strong>Use of Flexbox and CSS Grid:</strong> Learned the importance of flexible layout techniques for responsive design.
+            </li>
+            <li>
+              <strong>Simplification:</strong> Keeping HTML structure simple and using semantic tags improved code readability and accessibility.
+            </li>
+          </ul>
+        </div>
+        <img class="content-img" src="images/draft1.png" alt="draft1" style="width: 50%; height: auto;">
+        <p class="img-credit">First Draft of My User Profile Page Design</p>
+      </div>
 
-        </footer>
-        
-    </body>
+      <!-- Accessibility Card -->
+      <div class="card" id="accessibility">
+        <h2 style="text-align: center; color: #a558d8;">Accessibility:</h2>
+        <div class="section">
+          <ul>
+            <li>
+              <strong>Semantic HTML:</strong> Using semantic tags like &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, and &lt;main&gt; enhances accessibility. For example, in sitemap.html, clear &lt;a&gt; tags help users navigate easily.
+            </li>
+            <li>
+              <strong>Alt Text for Images:</strong> Images (e.g. in profile.html) include descriptive alt text for visually impaired users.
+            </li>
+            <li>
+              <strong>Keyboard Navigation:</strong> Navigation is designed to be fully accessible via keyboard (using tabindex), ensuring logical page navigation.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Compliance Card -->
+      <div class="card" id="compliance">
+        <h2 style="text-align: center; color: #a558d8;">Compliance:</h2>
+        <div class="section">
+          <ul>
+            <li>
+              <strong>Adherence to Standards:</strong> All pages comply with HTML5 and CSS3 standards, with mobile-first designs and proper viewport settings.
+            </li>
+            <li>
+              <strong>Testing for Valid HTML:</strong> Tools like the W3C HTML validator were used to ensure code validity.
+            </li>
+            <li>
+              <strong>Data Privacy Compliance:</strong> No sensitive user data is collected; forms (if any) include clear consent mechanisms and privacy policies.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- References Card -->
+      <div class="card" id="references">
+        <h2 style="text-align: center; color: #a558d8;">References:</h2>
+        <div class="section">
+          <ul>
+            <li>
+              <strong>Lecture Notes:</strong> Referenced the University's materials on HTML5 best practices and responsive design.
+            </li>
+            <li>
+              <strong>External Resources:</strong>
+              <ul>
+                <li>Mozilla Developer Network (MDN) for HTML and CSS guides.</li>
+                <li>W3C HTML Validator for code validity.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Example:</strong> "Using semantic HTML elements helps improve accessibility and SEO" – 
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="links">MDN Web Docs</a>.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+    <ul>
+      <li><a href="sitemap.html">Sitemap</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="content_ST4.html">Content Page</a></li>
+      <li><a href="pageEditor_ST4.html">Page Editor</a></li>
+      <li><a href="validation_ST4.html">Validation</a></li>
+    </ul>
+    
+    <button type="button" class="go-to-top" onclick="window.location.href='#top'">
+      Go to Top
+    </button>
+  </footer>
+</body>
 </html>
