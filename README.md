@@ -1,65 +1,51 @@
-🌐 WebDev-CW
+# 🌐 WebDev-CW  
 
-📌 Project Overview
+## 📌 Project Overview  
+This project is a **web development coursework** demonstrating essential web design and development concepts, such as **content structuring, page validation, and navigation optimization**. The website is built using **HTML and CSS**, ensuring a clean and accessible design.  
 
-This project is a web development coursework demonstrating essential web design and development concepts, such as content structuring, page validation, and navigation optimization. The website is built using HTML and CSS, ensuring a clean and accessible design.
+## 👨‍💻 My Contributions  
+I was responsible for developing the following key sections of the website:  
 
-👨‍💻 My Contributions
+### 📝 1. Profile Page  
+✅ Designed and structured the **profile page** with a clean, user-friendly layout.  
+✅ Styled with **CSS** to enhance readability and visual appeal.  
+✅ Ensured **proper formatting and accessibility**.  
 
-I was responsible for developing the following key sections of the website:
+🔗 **Live Preview:** [Profile Page](https://batuzihni.github.io/WebDev-CW/profile.html)  
 
-📝 1. Profile Page
+### 📄 2. Content Page  
+✅ Created the **content page** to display structured information.  
+✅ Applied **semantic HTML** for improved **SEO and accessibility**.  
+✅ Organized the content for easy navigation and usability.  
 
-✅ Designed and structured the profile page with a clean, user-friendly layout.
-✅ Styled with CSS to enhance readability and visual appeal.
-✅ Ensured proper formatting and accessibility.
+### 🛠️ 3. Page Editor  
+✅ Developed the **page editor** section for managing structured content.  
+✅ Focused on clean formatting and a professional presentation.  
+✅ Maintained **consistent styling and layout** across the website.  
 
-🔗 Live Preview: Profile Page
+### ✅ 4. Validation Page  
+✅ The **validation page** contains screenshots of HTML validation results.  
+✅ Used an external validation tool to check and improve **HTML structure**.  
+✅ Ensured compliance with **W3C validation standards**.  
 
-📄 2. Content Page
+### 🌍 5. Sitemap Page  
+✅ Created a **sitemap page** for improved **website navigation**.  
+✅ Helped users locate different sections efficiently.  
+✅ Followed **best practices in HTML structuring**.  
 
-✅ Created the content page to display structured information.
-✅ Applied semantic HTML for improved SEO and accessibility.
-✅ Organized the content for easy navigation and usability.
+## 💻 Technologies Used  
+🚀 **HTML5** – Structuring the website.  
+🎨 **CSS3** – Styling and layout enhancements.  
 
-🔗 Live Preview: Content Page
+## 🚀 Future Improvements  
+🔹 Enhancing **mobile responsiveness** for better usability.  
+🔹 Refining the **styling and layout** to improve user experience.  
+🔹 Exploring additional features like **interactive elements** in future updates.  
 
-🛠️ 3. Page Editor
+## 🔗 Links  
+🔹 **GitHub Repository:** [WebDev-CW](https://github.com/batuzihni/WebDev-CW)  
+🔹 **Live Website:** [Visit Here](https://batuzihni.github.io/WebDev-CW/profile.html)  
 
-✅ Developed the page editor section for managing structured content.
-✅ Focused on clean formatting and a professional presentation.
-✅ Maintained consistent styling and layout across the website.
+---
 
-🔗 Live Preview: Page Editor
-
-✅ 4. Validation Page
-
-✅ The validation page contains screenshots of HTML validation results.
-✅ Used an external validation tool to check and improve HTML structure.
-✅ Ensured compliance with W3C validation standards.
-
-🔗 Live Preview: Validation Page
-
-🌍 5. Sitemap Page
-
-✅ Created a sitemap page for improved website navigation.
-✅ Helped users locate different sections efficiently.
-✅ Followed best practices in HTML structuring.
-
-🔗 Live Preview: Sitemap Page
-
-💻 Technologies Used
-
-🚀 HTML5 – Structuring the website.
-🎨 CSS3 – Styling and layout enhancements.
-
-🚀 Future Improvements
-
-🔹 Enhancing mobile responsiveness for better usability.
-🔹 Refining the styling and layout to improve user experience.
-🔹 Exploring additional features like interactive elements in future updates.
-
-🔗 Links
-
-🔹 GitHub Repository: WebDev-CW
-🔹 Live Website: Visit Here
+💡 **Feel free to explore the repository!** If you have any feedback or suggestions, let me know. 😊🔥  
