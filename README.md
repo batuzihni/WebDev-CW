@@ -11,6 +11,8 @@ I was responsible for developing the following key sections of the website:
 ✅ Styled with **CSS** to enhance readability and visual appeal.  
 ✅ Ensured **proper formatting and accessibility**.  
 
+🔗 **Live Preview:** [Profile Page](https://batuzihni.github.io/WebDev-CW/profile.html)  
+
 ### 📄 2. Content Page  
 ✅ Created the **content page** to display structured information.  
 ✅ Applied **semantic HTML** for improved **SEO and accessibility**.  
@@ -40,8 +42,9 @@ I was responsible for developing the following key sections of the website:
 🔹 Refining the **styling and layout** to improve user experience.  
 🔹 Exploring additional features like **interactive elements** in future updates.  
 
-## 🔗 Repository Link  
-👉 [GitHub Repository](https://github.com/batuzihni/WebDev-CW)  
+## 🔗 Links  
+🔹 **GitHub Repository:** [WebDev-CW](https://github.com/batuzihni/WebDev-CW)  
+🔹 **Live Website:** [Visit Here](https://batuzihni.github.io/WebDev-CW/profile.html)  
 
 ---
 
